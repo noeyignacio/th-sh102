@@ -226,7 +226,7 @@ h6 {
 }
 
 #intro .intro-info h2 span {
-  color: #1bb1dc;
+  color: #8706f0;
 }
 
 #intro .intro-info .btn-get-started,
@@ -241,13 +241,13 @@ h6 {
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
-  background: #1bb1dc;
+  background: #8706f0;
   color: #fff;
 }
 
 #intro .intro-info .btn-get-started:hover,
 #intro .intro-info .btn-services:hover {
-  background: #0a98c0;
+  background: #8706f0;
 }
 
 /*--------------------------------------------------------------

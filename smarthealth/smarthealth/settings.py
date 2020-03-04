@@ -40,6 +40,15 @@ INSTALLED_APPS = [
 
     'dashboard',
     'landingpage',
+    'clients',
+    'doctors',
+    'inventory',
+    'nurses',
+    'patients',
+    'users',
+    
+    
+    
 ]
 
 MIDDLEWARE = [
