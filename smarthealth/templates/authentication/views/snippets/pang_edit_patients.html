@@ -1,0 +1,767 @@
+<div class="col-lg-12">
+  <div class="card-wrapper">
+    <!-- Input groups -->
+    <div class="card">
+      <!-- Card header -->
+      <div class="card-header">
+        <h3 class="mb-0">Edit Profile</h3>
+      </div>
+      <!-- Card body -->
+      <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+          <!-- Input groups with icon -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-notes-medical"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="medicalProblems"
+                    class="form-control"
+                    placeholder="Medical Problems"
+                    type="text"
+                    value="{{ user.medicalProblems }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-notes-medical"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="medicalDirectives"
+                    class="form-control"
+                    placeholder="Medical Directives"
+                    type="text"
+                    value="{{ user.medicalDirectives }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-notes-medical"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="medications"
+                    class="form-control"
+                    placeholder="Medications"
+                    type="text"
+                    value="{{ user.medications }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="alkPhos"
+                    class="form-control"
+                    placeholder="ALK Phos"
+                    type="text"
+                    value="{{ user.alkPhos }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="bun"
+                    class="form-control"
+                    placeholder="Bun (mg/dL)"
+                    type="text"
+                    value="{{ user.bun }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="calcium"
+                    class="form-control"
+                    placeholder="Calcium (mg/dL)"
+                    type="text"
+                    value="{{ user.calcium }}"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="chloride"
+                    class="form-control"
+                    placeholder="Chloride (mmo/L)"
+                    type="text"
+                    value="{{ user.chloride }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="co2"
+                    class="form-control"
+                    placeholder="Co2 (mmo/L)"
+                    type="text"
+                    value="{{ user.co2 }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="creatinine"
+                    class="form-control"
+                    placeholder="Creatinine (mg/dL)"
+                    type="text"
+                    value="{{ user.creatinine }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="po4"
+                    class="form-control"
+                    placeholder="Po4 (mg/dL)"
+                    type="text"
+                    value="{{ user.po4 }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="potassium"
+                    class="form-control"
+                    placeholder="Potassium (mmo/L)"
+                    type="text"
+                    value="{{ user.potassium }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="sgot"
+                    class="form-control"
+                    placeholder="Sgot (AST) (U/L)"
+                    type="text"
+                    value="{{ user.sgot }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="biliTotal"
+                    class="form-control"
+                    placeholder="Bili. Total (mg/dL)"
+                    type="text"
+                    value="{{ user.biliTotal }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="uricAcid"
+                    class="form-control"
+                    placeholder="Uric Acid (mg/dL)"
+                    type="text"
+                    value="{{ user.uricAcid }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="ldhTotal"
+                    class="form-control"
+                    placeholder="Ldh Total (UI/L)"
+                    type="text"
+                    value="{{ user.ldhTotal }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="sodium"
+                    class="form-control"
+                    placeholder="Sodium (mmo/L)"
+                    type="text"
+                    value="{{ user.sodium }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="bgRandom"
+                    class="form-control"
+                    placeholder="BG Random (mg/dL)"
+                    type="text"
+                    value="{{ user.bgRandom }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="height"
+                    class="form-control"
+                    placeholder="Height (in)"
+                    type="text"
+                    value="{{ user.height }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="weight"
+                    class="form-control"
+                    placeholder="Weight (lbs)"
+                    type="text"
+                    value="{{ user.weight }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-temperature-low"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="temperature"
+                    class="form-control"
+                    placeholder="Temperature (deg C)"
+                    type="text"
+                    value="{{ user.temperature }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-temperature-low"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="tempSite"
+                    class="form-control"
+                    placeholder="Temperature Site "
+                    type="text"
+                    value="{{ user.tempSite }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-wave-square"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="pulseRate"
+                    class="form-control"
+                    placeholder="Pulse Rate (/min)"
+                    type="text"
+                    value="{{ user.pulseRate }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-wave-square"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="pulseRhytm"
+                    class="form-control"
+                    placeholder="Pulse Rhytm"
+                    type="text"
+                    value="{{ user.pulseRhytm }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-wave-square"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="respRate"
+                    class="form-control"
+                    placeholder="Resp. Rate (/min)"
+                    type="text"
+                    value="{{ user.respRate }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-tint"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="bpSystolic"
+                    class="form-control"
+                    placeholder="Bp Systolic (mm Hg)"
+                    type="text"
+                    value="{{ user.bpSystolic }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-tint"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="bpDiastolic"
+                    class="form-control"
+                    placeholder="Bp Diastolic (mm Hg)"
+                    type="text"
+                    value="{{ user.bpDiastolic }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="cholesterol"
+                    class="form-control"
+                    placeholder="Cholesterol (mm/dL)"
+                    type="text"
+                    value="{{ user.cholesterol }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="hdl"
+                    class="form-control"
+                    placeholder="Hdl (mm/dL)"
+                    type="text"
+                    value="{{ user.hdl }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="ldl"
+                    class="form-control"
+                    placeholder="Ldl (mm/dL)"
+                    type="text"
+                    value="{{ user.ldl }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="bgRandom"
+                    class="form-control"
+                    placeholder="BG Random (mm/dL)"
+                    type="text"
+                    value="{{ user.bgRandom }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="cxr"
+                    class="form-control"
+                    placeholder="CXR"
+                    type="text"
+                    value="{{ user.cxr }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="ekg"
+                    class="form-control"
+                    placeholder="EKG"
+                    type="text"
+                    value="{{ user.ekg }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="papSmear"
+                    class="form-control"
+                    placeholder="PAP Smear"
+                    type="text""
+                    value="{{ user.papSmear }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="mammogram"
+                    class="form-control"
+                    placeholder="Mammogram"
+                    type="text"
+                    value="{{ user.mammogram }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="hemoccult"
+                    class="form-control"
+                    placeholder="Hemoccult"
+                    type="text"
+                    value="{{ user.hemoccult }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="fluVax"
+                    class="form-control"
+                    placeholder="Flu Vax"
+                    type="text"
+                    value="{{ user.fluVax }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="pneumovax"
+                    class="form-control"
+                    placeholder="Pneumovax"
+                    type="text"
+                    value="{{ user.pneumovax }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-vial"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="tdBooster"
+                    class="form-control"
+                    placeholder="TdBooster"
+                    type="text"
+                    value="{{ user.tdBooster }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-shoe-prints"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="footExam"
+                    class="form-control"
+                    placeholder="Foot Exam"
+                    type="text"
+                    value="{{ user.footExam }}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-eye"></i
+                    ></span>
+                  </div>
+                  <input
+                    name="eyeExam"
+                    class="form-control"
+                    placeholder="Eye Exam"
+                    type="text"
+                    value="{{ user.eyeExam }}"
+                </div>
+
+              </div>
+
+            </div>
+              <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Start your development with a Dashboard for Bootstrap 4."
+    />
+    <meta name="author" content="Creative Tim" />
+    <title>Smart Health 102 | Doctors</title>
+
+    {% include 'containers/components/css.html' %}
+  </head>
+
+
+</html>
+
+
+<div class="col">
+  <div class="card">
+    <!-- Card header -->
+    <div class="table-responsive py-4">
+      <table class="table table-flush" id="datatable-buttons">
+        <thead class="thead-light">
+          <tr>
+            <th>Hospital Name</th>
+            <th>Email</th>
+            <th>Date Joined</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Hospital Name</th>
+            <th>Email</th>
+            <th>Date Joined</th>
+            <th>Actions</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          {% for client in object_list.qs %}
+          <tr>
+            <td>
+                {{ client.hospitalName }}
+            </td>
+            <td>{{client.email}}</td>
+            <td>{{ client.date_joined }}</td>
+
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-success btn-sm">
+                  Update
+                </button>
+                <button type="button" class="btn btn-danger btn-sm">
+                  <a href="{% url 'users:delete' client.username %}">Delete</a>
+                </button>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

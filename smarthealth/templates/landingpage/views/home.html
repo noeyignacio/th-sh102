@@ -1,0 +1,390 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Smart Health 102</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    {% include 'containers/components/landingpage_css.html' %}
+  </head>
+
+  <body>
+    <!--==========================
+  Header
+  ============================-->
+    <header id="header">
+      <div id="topbar">
+        <div class="container">
+          <div class="social-links"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="logo float-left">
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <h1 class="text-light">
+            <a href="#intro" class="scrollto"><span>SH 102</span></a>
+          </h1>
+          <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+        </div>
+
+        <nav class="main-nav float-right d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="#intro">Home</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+            <li class="drop-down">
+              <a href="">Inquire?</a>
+              <ul>
+                <li><a href="#">HOSPITAL</a></li>
+                <li class="drop-down">
+                  <a href="#">PEROSONAL</a>
+                  <ul>
+                    <li><a href="#">Deep Drop Down 1</a></li>
+                    <li><a href="#">Deep Drop Down 2</a></li>
+                    <li><a href="#">Deep Drop Down 3</a></li>
+                    <li><a href="#">Deep Drop Down 4</a></li>
+                    <li><a href="#">Deep Drop Down 5</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="intro" class="clearfix">
+      <div class="container d-flex h-100">
+        <div class="row justify-content-center align-self-center">
+          <div class="col-md-6 intro-info order-md-first order-last">
+            <h2>Smart Health 102<br /><span> becasue we care! </span></h2>
+            <div>
+              <a href="" class="btn-get-started scrollto">Get Started</a>
+              <a href="" class="btn-get-started scrollto">Sign in</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 intro-img order-md-last order-first">
+            <img
+              src="{% static 'img/intro/unnamed.png' %}"
+              alt=""
+              class="img-fluid"
+              style="width: 500px;"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main id="main">
+      <section id="services" class="section-bg">
+        <div class="container">
+          <header class="section-header">
+            <h3>Services</h3>
+            <p>
+              Medical Data Assortment and Analysis Web Application
+            </p>
+          </header>
+
+          <div class="row">
+            <div
+              class="col-md-6 col-lg-4 wow bounceInUp"
+              data-wow-duration="1.4s"
+            >
+              <div class="box">
+                <div class="icon" style="background: #fceef3;">
+                  <i
+                    class="ion-ios-analytics-outline"
+                    style="color: #ff689b;"
+                  ></i>
+                </div>
+                <h4 class="title"><a href="">Analytics</a></h4>
+                <p class="description">
+                  Voluptatum deleniti atque corrupti quos dolores et quas
+                  molestias excepturi sint occaecati cupiditate non provident
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-4 wow bounceInUp"
+              data-wow-duration="1.4s"
+            >
+              <div class="box">
+                <div class="icon" style="background: #fff0da;">
+                  <i
+                    class="ion-ios-bookmarks-outline"
+                    style="color: #e98e06;"
+                  ></i>
+                </div>
+                <h4 class="title"><a href="">Appointment</a></h4>
+                <p class="description">
+                  Minim veniam, quis nostrud exercitation ullamco laboris nisi
+                  ut aliquip ex ea commodo consequat tarad limino ata
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 wow bounceInUp"
+              data-wow-delay="0.1s"
+              data-wow-duration="1.4s"
+            >
+              <div class="box">
+                <div class="icon" style="background: #e6fdfc;">
+                  <i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i>
+                </div>
+                <h4 class="title"><a href="">Lists and Records</a></h4>
+                <p class="description">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-4 wow bounceInUp"
+              data-wow-delay="0.1s"
+              data-wow-duration="1.4s"
+            >
+              <div class="box">
+                <div class="icon" style="background: #eafde7;">
+                  <i
+                    class="ion-ios-speedometer-outline"
+                    style="color:#41cf2e;"
+                  ></i>
+                </div>
+                <h4 class="title"><a href="">Dashboard</a></h4>
+                <p class="description">
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia deserunt mollit anim id est laborum
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 wow bounceInUp"
+              data-wow-delay="0.2s"
+              data-wow-duration="1.4s"
+            >
+              <div class="box">
+                <div class="icon" style="background: #e1eeff;">
+                  <i class="ion-ios-world-outline" style="color: #2282ff;"></i>
+                </div>
+                <h4 class="title"><a href="">Web App</a></h4>
+                <p class="description">
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium voluptatum deleniti atque
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-4 wow bounceInUp"
+              data-wow-delay="0.2s"
+              data-wow-duration="1.4s"
+            >
+              <div class="box">
+                <div class="icon" style="background: #ecebff;">
+                  <i class="ion-ios-clock-outline" style="color: #8660fe;"></i>
+                </div>
+                <h4 class="title"><a href="">Real Time</a></h4>
+                <p class="description">
+                  Et harum quidem rerum facilis est et expedita distinctio. Nam
+                  libero tempore, cum soluta nobis est eligendi
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="section-bg">
+        <div class="container">
+          <div class="section-header">
+            <h3>Team</h3>
+            <p>
+              Computer Engineering Students of Holy Angel University
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6 wow fadeInUp">
+              <div class="member">
+                <img
+                  src="{% static 'img/team/rate.jpg' %}"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="member-info">
+                  <div class="member-info-content">
+                    <h4>Rayterson S. Calaguas</h4>
+                    <span>Team Leader</span>
+                    <div class="social">
+                      <a href="https://www.facebook.com/masterrate"
+                        ><i class="fa fa-facebook"></i
+                      ></a>
+                      <a
+                        href="https://www.linkedin.com/in/rayterson-calaguas-8950271a2/"
+                        ><i class="fa fa-linkedin"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="member">
+                <img
+                  src="{% static 'img/team/archie.jpg' %}"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="member-info">
+                  <div class="member-info-content">
+                    <h4>Archie C. Gueco</h4>
+                    <span>Product Manager</span>
+                    <div class="social">
+                      <a href="https://www.facebook.com/Archiegueco"
+                        ><i class="fa fa-facebook"></i
+                      ></a>
+                      <a
+                        href="https://www.linkedin.com/in/archie-gueco-149265181/"
+                        ><i class="fa fa-linkedin"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="member">
+                <img
+                  src="{% static 'img/team/francis.jpg' %}"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="member-info">
+                  <div class="member-info-content">
+                    <h4>Francis Emmanuel D. Ignacio</h4>
+                    <span>Developer</span>
+                    <div class="social">
+                      <a href="https://www.facebook.com/noeyignacio"
+                        ><i class="fa fa-facebook"></i
+                      ></a>
+                      <a
+                        href="https://www.linkedin.com/in/francis-emmanuel-ignacio-264414177/"
+                        ><i class="fa fa-linkedin"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="section-bg">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="footer-info">
+                    <h3>SH 102</h3>
+                    <p>
+                      Smart Health 102 is a web application intended to provide
+                      an adequate solution for solving the complex, distributed
+                      and interdisciplinary nature of medical data that
+                      emphasized the limitations of traditional data access,
+                      storage, processing, analyzing and sharing capability.
+                      Such data hold great importance for the healthcare
+                      industry's treatment, patient care and process management.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-sm-3">
+                  <div class="footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                      <li><a href="">Home</a></li>
+                      <li>
+                        <a
+                          href="https://www.facebook.com/Smart-Health-102-111910787017837/"
+                          >About us</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.facebook.com/Smart-Health-102-111910787017837/"
+                          >Services</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.termsfeed.com/terms-conditions/b1391543d84b0925afd19d3a3ba66bd2"
+                          >Terms of service</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.termsfeed.com/privacy-policy/9d900a823ca754a9d3a2310b3fedd679"
+                          >Privacy policy</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-sm-3">
+                  <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <p>
+                      Holy Angel University <br />
+                      1 Holy Angel St. <br />
+                      Angeles, 2009 Pampanga <br />
+                      Philippines <br />
+                      <strong>Phone:</strong> Soon...<br />
+                      <strong>Email:</strong> Soon...<br />
+                    </p>
+                  </div>
+
+                  <div class="social-links">
+                    <a
+                      href="https://www.facebook.com/Smart-Health-102-111910787017837/"
+                      class="facebook"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong>Smart Health 102</strong>. All Rights
+          Reserved 2020
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <div id="preloader"></div>
+
+    {% include 'containers/components/landingpage_js.html' %}
+  </body>
+</html>

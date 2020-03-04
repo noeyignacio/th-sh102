@@ -1,0 +1,50 @@
+<div class="col">
+  <div class="card">
+    <!-- Card header -->
+    <div class="table-responsive py-4">
+      <table class="table table-flush" id="datatable-buttons">
+        <thead class="thead-light">
+          <tr>
+            <th>Name</th>
+            <th>Generic Name</th>
+            <th>Quantity</th>
+            <th>Category</th>
+            <th>Last Update</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Name</th>
+            <th>Generic Name</th>
+            <th>Quantity</th>
+            <th>Category</th>
+            <th>Last Update</th>
+            <th>Actions</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          {% for d in drug %}
+          <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.genericName}}</td>
+            <td>{{d.quantity}}</td>
+            <td>{{d.category}}</td>
+            <td>{{d.date_updated}}</td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-success btn-sm">
+                  <a href="{% url 'inventory:editDrug' d.id%}">Edit</a>
+                </button>
+                <button type="button" class="btn btn-danger btn-sm">
+                  <a href="{% url 'inventory:deleteDrug' d.id%}">Delete</a>
+                </button>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

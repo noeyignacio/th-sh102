@@ -1,0 +1,62 @@
+<div class="col">
+  <div class="card">
+    <!-- Card header -->
+    <div class="table-responsive py-4">
+      <table class="table table-flush" id="datatable-buttons">
+        <thead class="thead-light">
+          <tr>
+              <th>Username</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Specialization</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>Address</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+              <th>Username</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Specialization</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>Address</th>
+            <th>Actions</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          {% for doc in object_list.qs %}
+          <tr>
+            <td>{{doc.username}}</td>
+            <td>
+              {{ doc.lastName }} {{ doc.firstName }}, {{ doc.middleName }}
+            </td>
+            <td>{{doc.gender}}</td>
+            <td>{{doc.specialization}}</td>
+            <td>{{doc.email}}</td>
+            <td>{{doc.mobile_number}}</td>
+{#            <td>{{d.medicalSchool}}</td>#}
+            <td>{{doc.homeAddress}}</td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-info btn-sm">
+                  <a href="{% url 'users:profile' doc.username %}">View</a>
+                </button>
+                <button type="button" class="btn btn-success btn-sm">
+                  Update
+                </button>
+                <button type="button" class="btn btn-danger btn-sm">
+                  <a href="{% url 'users:delete' doc.username %}">Delete</a>
+                </button>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
