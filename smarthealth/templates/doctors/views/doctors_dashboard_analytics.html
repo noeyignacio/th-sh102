@@ -13,28 +13,39 @@
 
   <body>
     <!-- Side Navbar -->
-    {% include 'doctors/layouts/sidenavbar/main_sidenavbar.html' %}
+    {% include 'doctors/layouts/sidenavbar/doctors_sidenavbar.html' %}
 
     <!-- Main content -->
     <div class="main-content" id="panel">
       <!-- Top Navbar -->
-      {% include 'doctors/layouts/topnavbar/main_topnavbar.html' %}
+      {% include 'doctors/layouts/topnavbar/doctors_topnavbar.html' %}
 
       <div class="header bg-info pb-6">
         <div class="container-fluid">
           <div class="header-body">
             <!-- Main Header -->
-            {% include 'doctors/layouts/header/main_header.html' %}
+            {% include 'doctors/layouts/header/analytics_header.html' %}
 
-            {% include 'doctors/layouts/cards/main_cards.html' %}
+            {% include 'doctors/layouts/cards/analytics_cards.html' %}
             
           </div>
         </div>
       </div>
       <!-- Page content -->
       <div class="container-fluid mt--6">
-        <!--  -->
-        {% include 'doctors/data/total_patients.html' %}
+        <div class="row">
+          <!-- Dengue Overview Chart -->
+          {% include 'doctors/data/analytics_dengue.html' %} 
+          {% include 'doctors/data/analytics_hiv.html' %} 
+          {% include 'doctors/data/analytics_meningococcal.html' %}
+          <!-- TB Overview Chart -->
+          {% include 'doctors/data/analytics_tb.html' %}
+        </div>
+        <div class="row">
+          <!-- Leptospirosis -->
+          {% include 'doctors/data/analytics_lepto.html' %}
+        </div>
+
 
         <!-- Footer -->
         {% include 'containers/layouts/footer/main_footer.html' %}
@@ -44,4 +55,5 @@
 
     {% include 'containers/components/js.html' %}
   </body>
+
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Smart Health 102 | Dashboard</title>
+
+    {% include 'containers/components/css.html' %}
+  </head>
+
+  <body>
+    <!-- Side Navbar -->
+    {% include 'doctors/layouts/sidenavbar/doctors_sidenavbar.html' %}
+
+    <!-- Main content -->
+    <div class="main-content" id="panel">
+      <!-- Top Navbar -->
+      {% include 'doctors/layouts/topnavbar/doctors_topnavbar.html' %}
+
+      <div class="header bg-info pb-6">
+        <div class="container-fluid">
+          <div class="header-body">
+            <!-- Main Header -->
+            {% include 'doctors/layouts/header/hospital_header.html' %}
+
+            {% include 'doctors/layouts/cards/hospital_cards.html' %}
+            
+          </div>
+        </div>
+      </div>
+      <!-- Page content -->
+      <div class="container-fluid mt--6">
+        <!-- Patients -->
+        {% include 'doctors/data/graph_patients.html' %}  
+
+        <!-- Dengue & Lepto -->
+        {% include 'doctors/data/graph_dengue_lepto.html' %}
+
+
+        <!-- Footer -->
+        {% include 'containers/layouts/footer/main_footer.html' %}
+
+      </div>
+    </div>
+
+    {% include 'containers/components/js.html' %}
+  </body>
+</html>
