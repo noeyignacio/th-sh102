@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
-
+from patients.models import Patient
 
 def doctorsDashboardHospital(request):
 
@@ -14,7 +14,13 @@ def doctorsDashboardAnalytics(request):
 
 def doctorsPatientsList(request):
 
-    return render(request, 'doctors/views/doctors_patients_list.html')
+    patient = Patient.objects.all()
+
+    context = {
+        'patient' : patient
+    }
+
+    return render(request, 'doctors/views/doctors_patients_list.html', context)
 
 
 def doctorsNursesList(request):
