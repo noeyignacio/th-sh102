@@ -1,0 +1,192 @@
+<div class="row">
+    <div class="col-xl-12 order-xl-1">
+        <div class="card">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col-8">
+                        <h3 class="mb-0">Profile</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <h6 class="heading-small text-muted mb-4">
+                        User information
+                    </h6>
+                    <div class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-username"
+                                        >Medical ID</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="MDHAU{{patient.id}}SH102"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-email"
+                                        >Full Name</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="{{patient.lastName}}, {{patient.firstName}} {{patient.middleName}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-first-name"
+                                        >Birthdate</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="{{patient.birthDate}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-last-name"
+                                        >Gender</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="{{patient.gender}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-last-name"
+                                        >Mobile Number</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="{{patient.mobile_number}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-last-name"
+                                        >Civil Status</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="{{patient.maritalStatus}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+
+                    <h6 class="heading-small text-muted mb-4">
+                        Contact information
+                    </h6>
+                    <div class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-address"
+                                        >Address</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="{{patient.homeAddress}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-city"
+                                        >City</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="{{patient.city}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-country"
+                                        >Country</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="{{patient.country}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-country"
+                                        >Postal code</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        placeholder="{{patient.postal}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+                    <!-- Description -->
+                    <h6 class="heading-small text-muted mb-4">About me</h6>
+                    <div class="pl-lg-4">
+                        <div class="form-group">
+                            <label class="form-control-label">About Me</label>
+                            <textarea
+                                rows="4"
+                                class="form-control"
+                                placeholder="A few words about you ..."
+                            >
+A beautiful premium dashboard for Bootstrap 4.</textarea
+                            >
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

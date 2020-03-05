@@ -26,6 +26,25 @@ def doctorsDashboardHospital(request):
 
     return render(request, 'doctors/views/doctors_dashboard_hospital.html', context)
 
+def doctorsDashboardDental(request):
+
+    patient = Patient.objects.all()
+
+    today = date.today().strftime('%m')
+    totalPatientsTodaysMonth = Patient.objects.annotate(month=TruncMonth('date_joined'))\
+            .values('month').annotate(total=Count('date_joined')).filter(date_joined__month=today)
+
+    total_patient = patient.count()
+
+    context = {
+        'patient' : patient,
+        'total_patient' : total_patient,
+        'totalPatientsTodaysMonth': totalPatientsTodaysMonth
+    }
+
+    return render(request, 'doctors/views/doctors_dashboard_dental.html', context)
+
+
 
 def doctorsDashboardAnalytics(request):
 
@@ -46,3 +65,15 @@ def doctorsPatientsList(request):
 def doctorsNursesList(request):
 
     return render(request, 'doctors/views/doctors_nurses_list.html')
+
+
+# Viewing
+def profile(request, pk):
+
+    patient = Patient.objects.get(id=pk)
+
+    context = {
+        'patient': patient
+    }
+
+    return render(request, 'profile/views/profilepage.html', context)

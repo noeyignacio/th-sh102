@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <title>Smart Health 102 | Patients</title>
+
+        {% include 'containers/components/css.html' %}
+    </head>
+
+    <body>
+        <!-- Side Navbar -->
+        {% include 'doctors/layouts/sidenavbar/doctors_sidenavbar.html' %}
+
+        <!-- Main content -->
+        <div class="main-content" id="panel">
+            <!-- Top Navbar -->
+            {% include 'doctors/layouts/topnavbar/doctors_topnavbar.html' %}
+
+            <!-- Header -->
+            {% include 'profile/layouts/header/main_header.html' %}
+            <!-- Page content -->
+            <div class="container-fluid mt--6">
+                <!-- Patients List -->
+                {% include 'profile/data/profile.html' %}
+
+                <!-- Footer -->
+                {% include 'containers/layouts/footer/main_footer.html' %}
+            </div>
+        </div>
+
+        {% include 'containers/components/js.html' %}
+    </body>
+</html>
