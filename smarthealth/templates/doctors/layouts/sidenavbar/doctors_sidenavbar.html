@@ -98,41 +98,9 @@
                 </li>
                 <li class="nav-item">
                   <a
-                    href="../../pages/dashboards/alternative.html"
+                    href="{% url 'createPatient' %}"
                     class="nav-link"
                     >Add New Patient</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-       
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#nurses-list"
-              data-toggle="collapse"
-              role="button"
-              aria-expanded="false"
-              aria-controls="nurses-list"
-            >
-              <i class="fas fa-user-nurse text-info"></i>
-              <span class="nav-link-text">Nurses</span>
-            </a>
-            <div class="collapse" id="nurses-list">
-              <ul class="nav nav-sm flex-column">
-                <li class="nav-item">
-                  <a
-                    href="{% url 'doctorsNursesList' %}"
-                    class="nav-link"
-                    >View All Nurses</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="../../pages/dashboards/alternative.html"
-                    class="nav-link"
-                    >Add New Nurses</a
                   >
                 </li>
               </ul>

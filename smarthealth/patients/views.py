@@ -1,17 +1,38 @@
-from django.shortcuts import render
-from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect 
+from .forms import PatientForm
+from .models import *
 
 
-def personalRegiterPage(request):
+def createPatient(request):
 
-    form = UserCreationForm()
-
-    # if request.method == 'POST':
-    #     form = UserCreationForm(request.POST)
-    #     if form.is
+    form = PatientForm()
+    if request.method == 'POST':
+        form = PatientForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('doctorsPatientsList')
 
     context = {
-        'form' : form
+        'form' : form,
     }
 
-    return render(request, 'registerpage/views/registerpage.html', context)
+    return render(request, 'patients/views/patient_create.html', context)
+
+def updatePatient(request, pk):
+
+    patient_info = Patient.objects.all()
+    patient = Patient.objects.get(id=pk)
+    form = PatientForm(instance=patient)
+
+    if request.method == 'POST':
+            form = PatientForm(request.POST, instance=patient)
+            if form.is_valid:
+                form.save()
+                return redirect('doctorsPatientsList')
+
+    context = {
+        'form' : form,
+    }
+
+    return render(request, 'patients/views/patient_update.html', context)
+

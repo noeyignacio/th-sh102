@@ -1,13 +1,19 @@
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 
 from datetime import date, datetime
 from django.db.models.functions import TruncMonth, TruncDate
 from django.db.models import Count
 from time import strftime
 
+from users.decorators import unauthenticated_user, allowed_users
+
+
 from patients.models import Patient
 
+@login_required(login_url='home')
+@allowed_users(allowed_roles=['Doctor'])
 def doctorsDashboardHospital(request):
 
     patient = Patient.objects.all()
@@ -26,6 +32,8 @@ def doctorsDashboardHospital(request):
 
     return render(request, 'doctors/views/doctors_dashboard_hospital.html', context)
 
+@login_required(login_url='home')
+@allowed_users(allowed_roles=['Doctor'])
 def doctorsDashboardDental(request):
 
     patient = Patient.objects.all()
@@ -45,12 +53,15 @@ def doctorsDashboardDental(request):
     return render(request, 'doctors/views/doctors_dashboard_dental.html', context)
 
 
-
+@login_required(login_url='home')
+@allowed_users(allowed_roles=['Doctor'])
 def doctorsDashboardAnalytics(request):
 
     return render(request, 'doctors/views/doctors_dashboard_analytics.html')
 
 
+@login_required(login_url='home')
+@allowed_users(allowed_roles=['Doctor'])
 def doctorsPatientsList(request):
 
     patient = Patient.objects.all()
@@ -61,13 +72,33 @@ def doctorsPatientsList(request):
 
     return render(request, 'doctors/views/doctors_patients_list.html', context)
 
+@login_required(login_url='home')
+@allowed_users(allowed_roles=['Doctor'])
+def doctorsPatientRegister(request):
 
+    form = UserCreationForm()
+
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    context = {
+        'form' : form
+    }
+
+    return render(request, 'doctors/views/doctors_register_nurse.html', context)
+
+
+@login_required(login_url='home')
+@allowed_users(allowed_roles=['Doctor'])
 def doctorsNursesList(request):
 
     return render(request, 'doctors/views/doctors_nurses_list.html')
 
 
-# Viewing
+@login_required(login_url='home')
+@allowed_users(allowed_roles=['Doctor'])
 def profile(request, pk):
 
     patient = Patient.objects.get(id=pk)

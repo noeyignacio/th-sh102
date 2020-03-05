@@ -1,0 +1,116 @@
+<div class="row">
+  <div class="col-xl-12 order-xl-1">
+    <div class="card">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col-8">
+            <h3 class="mb-0">Profile</h3>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <h6 class="heading-small text-muted mb-4">
+            User information
+          </h6>
+          <div class="pl-lg-4">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="form-control-label">Medical ID</label>
+                  <input class="form-control" value="MDHAU***SH102" readonly />
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="form-group">
+                  <label class="form-control-label">Full Name</label>
+                  <div>
+                    {{form.lastName}} {{form.firstName}} {{form.middleName}}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <label class="form-control-label">Birthdate</label>
+                  <div>
+                    {{form.birthDate}}
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <label class="form-control-label">Gender</label>
+                  <div>
+                    {{form.gender}}
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <label class="form-control-label">Mobile Number</label>
+                  <div>
+                    {{form.mobile_number}}
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <label class="form-control-label">Civil Status</label>
+                  <div>
+                    {{form.maritalStatus}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4" />
+          <h6 class="heading-small text-muted mb-4">
+            Contact information
+          </h6>
+          <div class="pl-lg-4">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="form-control-label">Address</label>
+                  <div>
+                    {{form.homeAddress}}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="form-control-label">City</label>
+                  <div>
+                    {{form.city}}
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="form-control-label">Country</label>
+                  <div>
+                    {{form.country}}
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="form-control-label">Postal code</label>
+                  <div>
+                    {{form.postal}}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-xl btn-success">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
