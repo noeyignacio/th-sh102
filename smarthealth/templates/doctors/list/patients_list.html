@@ -3,44 +3,44 @@
     <div class="card">
       <!-- Card header -->
       <div class="card-header">
-        <h3 class="mb-0">Datatable</h3>
+        <h3 class="mb-0">Records</h3>
         <p class="text-sm mb-0">
-          This is an exmaple of datatable using the well known datatables.net
-          plugin. This is a minimal setup in order to get started fast.
+          Confidential Medical Records
         </p>
       </div>
       <div class="table-responsive py-4">
         <table class="table table-flush" id="datatable-basic">
           <thead class="thead-light">
             <tr>
-              <th>Name</th>
-              <th>Position</th>
-              <th>Office</th>
-              <th>Age</th>
-              <th>Start date</th>
-              <th>Salary</th>
+              <th>Medical ID</th>
+              <th>City</th>
+              <th>Birthdate</th>
+              <th>Gender</th>
+              <th>Mobile Number</th>
+              <th>Date Joined</th>
               <th>Action</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
-              <th>Name</th>
-              <th>Position</th>
-              <th>Office</th>
-              <th>Age</th>
-              <th>Start date</th>
-              <th>Salary</th>
+              <th>Medical ID</th>
+              <th>City</th>
+              <th>Birthdate</th>
+              <th>Gender</th>
+              <th>Mobile Number</th>
+              <th>Date Joined</th>
               <th>Action</th>
             </tr>
           </tfoot>
           <tbody>
+            {% for p in patient %}
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>MDHAU{{p.id}}SH102</td>
+              <td>{{p.city}}</td>
+              <td>{{p.birthDate}}</td>
+              <td>{{p.gender}}</td>
+              <td>{{p.mobile_number}}</td>
+              <td>{{p.date_joined}}</td>
               <td>
               <div class="btn-group">
                 <button type="button" class="btn btn-info btn-sm">
@@ -55,6 +55,7 @@
               </div>
             </td>
             </tr>
+            {% endfor %}
           </tbody>
         </table>
       </div>

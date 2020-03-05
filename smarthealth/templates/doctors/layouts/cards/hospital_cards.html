@@ -9,7 +9,9 @@
             <h5 class="card-title text-uppercase text-muted mb-0">
               Patients
             </h5>
-            <span class="h2 font-weight-bold mb-0"></span>
+            <span class="h2 font-weight-bold mb-0">
+            {{total_patient}}
+            </span>
           </div>
           <div class="col-auto">
             <div
@@ -36,7 +38,11 @@
             <h5 class="card-title text-uppercase text-muted mb-0">
               New Patients
             </h5>
-            <span class="h2 font-weight-bold mb-0"></span>
+            <span class="h2 font-weight-bold mb-0">
+            {% for totalToday in totalPatientsTodaysMonth %}
+                    {{ totalToday.total }}
+            {% endfor %}
+            </span>
           </div>
           <div class="col-auto">
             <div
