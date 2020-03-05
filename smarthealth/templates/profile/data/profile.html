@@ -172,17 +172,67 @@
                     </div>
                     <hr class="my-4" />
                     <!-- Description -->
-                    <h6 class="heading-small text-muted mb-4">About me</h6>
+                    <h6 class="heading-small text-muted mb-4">
+                        Medical Information
+                    </h6>
                     <div class="pl-lg-4">
-                        <div class="form-group">
-                            <label class="form-control-label">About Me</label>
-                            <textarea
-                                rows="4"
-                                class="form-control"
-                                placeholder="A few words about you ..."
-                            >
-A beautiful premium dashboard for Bootstrap 4.</textarea
-                            >
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-first-name"
+                                        >Birthdate</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="{{patient.birthDate}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-last-name"
+                                        >Gender</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="{{patient.gender}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-last-name"
+                                        >Mobile Number</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="{{patient.mobile_number}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label
+                                        class="form-control-label"
+                                        for="input-last-name"
+                                        >Civil Status</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        value="{{patient.maritalStatus}}"
+                                        readonly
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>
