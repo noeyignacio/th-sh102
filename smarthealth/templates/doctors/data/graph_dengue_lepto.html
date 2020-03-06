@@ -2,26 +2,235 @@
   <div class="col-xl-6">
     <div class="card">
       <div class="card-header">
-        <h6 class="surtitle">As of Year 2020</h6>
+        <h6 class="surtitle">As of Year 2017 ~</h6>
         <h5 class="h3 mb-0">Dengue</h5>
-      </div>
-      <div class="card-body">
-        <div class="chart">
-          <canvas id="doctors_graph_dengue" class="chart-canvas"></canvas>
+
+        <br />
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a
+              class="nav-item nav-link active"
+              id="region1-tab"
+              data-toggle="tab"
+              href="#region1"
+              role="tab"
+              aria-controls="region1"
+              aria-selected="true"
+              >2017</a
+            >
+            <a
+              class="nav-item nav-link"
+              id="region2-tab"
+              data-toggle="tab"
+              href="#region2"
+              role="tab"
+              aria-controls="region2"
+              aria-selected="false"
+              >2018</a
+            >
+            <a
+              class="nav-item nav-link"
+              id="region3-tab"
+              data-toggle="tab"
+              href="#region3"
+              role="tab"
+              aria-controls="region3"
+              aria-selected="false"
+              >2019</a
+            >
+            <a
+              class="nav-item nav-link"
+              id="region4a-tab"
+              data-toggle="tab"
+              href="#region4a"
+              role="tab"
+              aria-controls="region4a"
+              aria-selected="false"
+              >2020</a
+            >
+          </div>
+        </nav>
+        <!-- Tab Content -->
+        <div class="tab-content" id="nav-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="region1"
+            role="tabpanel"
+            aria-labelledby="region1-tab"
+          >
+            <div class="card-body">
+              <div class="chart">
+                <canvas
+                  id="doctors_graph_dengue_2017"
+                  class="chart-canvas"
+                ></canvas>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade show"
+            id="region2"
+            role="tabpanel"
+            aria-labelledby="region2-tab"
+          >
+            <div class="card-body">
+              <div class="chart">
+                <canvas
+                  id="doctors_graph_dengue_2018"
+                  class="chart-canvas"
+                ></canvas>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="region3"
+            role="tabpanel"
+            aria-labelledby="region3-tab"
+          >
+            <div class="card-body">
+              <div class="chart">
+                <canvas
+                  id="doctors_graph_dengue_2019"
+                  class="chart-canvas"
+                ></canvas>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="region4a"
+            role="tabpanel"
+            aria-labelledby="region4a-tab"
+          >
+            <div class="card-body">
+              <div class="chart">
+                <canvas
+                  id="doctors_graph_dengue_2020"
+                  class="chart-canvas"
+                ></canvas>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Cleaning -->
   <div class="col-xl-6">
     <div class="card">
       <div class="card-header">
-        <h6 class="surtitle">As of Year 2020</h6>
-        <h5 class="h3 mb-0">Leptospirosis</h5>
-      </div>
-      <div class="card-body">
-        <div class="chart">
-          <canvas id="doctors_graph_lepto" class="chart-canvas"></canvas>
+        <h6 class="surtitle">As of Year 2017 ~</h6>
+        <h5 class="h3 mb-0">Dental (Cleaning)</h5>
+
+        <br />
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a
+              class="nav-item nav-link active"
+              id="region1-tab"
+              data-toggle="tab"
+              href="#region1aa"
+              role="tab"
+              aria-controls="region1"
+              aria-selected="true"
+              >2017</a
+            >
+            <a
+              class="nav-item nav-link"
+              id="region2-tab"
+              data-toggle="tab"
+              href="#region2aa"
+              role="tab"
+              aria-controls="region2"
+              aria-selected="false"
+              >2018</a
+            >
+            <a
+              class="nav-item nav-link"
+              id="region3-tab"
+              data-toggle="tab"
+              href="#region3aa"
+              role="tab"
+              aria-controls="region3"
+              aria-selected="false"
+              >2019</a
+            >
+            <a
+              class="nav-item nav-link"
+              id="region4a-tab"
+              data-toggle="tab"
+              href="#region4aaa"
+              role="tab"
+              aria-controls="region4a"
+              aria-selected="false"
+              >2020</a
+            >
+          </div>
+        </nav>
+        <!-- Tab Content -->
+        <div class="tab-content" id="nav-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="region1aa"
+            role="tabpanel"
+            aria-labelledby="region1aa-tab"
+          >
+            <div class="card-body">
+              <div class="chart">
+                <canvas
+                  id="doctors_graph_dental_2017"
+                  class="chart-canvas"
+                ></canvas>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade show"
+            id="region2aa"
+            role="tabpanel"
+            aria-labelledby="region2aa-tab"
+          >
+            <div class="card-body">
+              <div class="chart">
+                <canvas
+                  id="doctors_graph_dental_2018"
+                  class="chart-canvas"
+                ></canvas>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="region3aa"
+            role="tabpanel"
+            aria-labelledby="region3aa-tab"
+          >
+            <div class="card-body">
+              <div class="chart">
+                <canvas
+                  id="doctors_graph_dental_2019"
+                  class="chart-canvas"
+                ></canvas>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="region4aaa"
+            role="tabpanel"
+            aria-labelledby="region4aaa-tab"
+          >
+            <div class="card-body">
+              <div class="chart">
+                <canvas
+                  id="doctors_graph_dental_2020"
+                  class="chart-canvas"
+                ></canvas>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

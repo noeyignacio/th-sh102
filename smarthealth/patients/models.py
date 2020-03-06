@@ -1,6 +1,7 @@
 from django.core.validators import RegexValidator
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 from django.db import models
 
@@ -20,18 +21,28 @@ class Patient(models.Model):
         ('Legally Seperated', 'Legally Seperated'),
         ('Widowed', 'Widowed')
     )
+
+    CASE = (
+        ('Dengue', 'Dengue'),
+        ('Cleaning', 'Cleaning'),
+        ('Corona Virus', 'Corona Virus'),
+    )
+
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
-    lastName = models.CharField(max_length=100, null=True, default="N/A")
-    firstName = models.CharField(max_length=100, null=True, default="N/A")
-    middleName = models.CharField(max_length=100, null=True, default="N/A")
-    homeAddress = models.CharField(max_length=255, null=True, default="N/A")
-    city = models.CharField(max_length=30, null=True, default="N/A")
-    state = models.CharField(max_length=30, null=True, default="N/A")
-    postal = models.CharField(max_length=30, null=True, default="N/A")
-    country = models.CharField(max_length=30, null=True, default="N/A")
-    birthDate = models.CharField(max_length=100, null=True, default="N/A")
+    username = models.CharField(max_length=100, null=True)
+    lastName = models.CharField(max_length=100, null=True)
+    firstName = models.CharField(max_length=100, null=True)
+    middleName = models.CharField(max_length=100, null=True)
+    homeAddress = models.CharField(max_length=255, null=True)
+    city = models.CharField(max_length=30, null=True)
+    state = models.CharField(max_length=30, null=True)
+    postal = models.CharField(max_length=30, null=True)
+    country = models.CharField(max_length=30, null=True)
+    birthDate = models.CharField(max_length=100, null=True)
     gender = models.CharField(max_length=20, choices=GENDER_CHOICES, blank=False)
     maritalStatus = models.CharField(max_length=20, null=True, choices=STATUS, blank=True)
+    case = models.CharField(max_length=20, null=True, choices=CASE, blank=True)
+
 
     mobile_number = models.CharField(max_length=11, null=True,blank=False, validators=[RegexValidator(r'^\d{10,11}$')])
 
@@ -89,20 +100,7 @@ class Patient(models.Model):
 
 
     def __str__(self):
-        return str(self.user)
+        return str(self.lastName) + ', ' + str(self.firstName) + ' ' + str(self.middleName) + ' ' + str(self.username)
+
+
     
-
-def create_patient(sender, instance, created, **kwargs):
-
-    if created: 
-        Patient.objects.create(user=instance)
-
-post_save.connect(create_patient, sender=User)
-
-
-def update_patient(sender, instance, created, **kwargs):
-
-    if created == False:
-        instance.profile.save()
-    
-post_save.connect(create_patient, sender=User)

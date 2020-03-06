@@ -24,28 +24,552 @@
         <div class="container-fluid">
           <div class="header-body">
             <!-- Main Header -->
-            {% include 'doctors/layouts/header/hospital_header.html' %}
-
-            {% include 'doctors/layouts/cards/hospital_cards.html' %}
-            
+            {% include 'doctors/layouts/header/hospital_header.html' %} {% include 'doctors/layouts/cards/hospital_cards.html' %}
           </div>
         </div>
       </div>
       <!-- Page content -->
       <div class="container-fluid mt--6">
         <!-- Patients -->
-        {% include 'doctors/data/graph_patients.html' %}  
+        {% include 'doctors/data/graph_patients.html' %}
 
         <!-- Dengue & Lepto -->
         {% include 'doctors/data/graph_dengue_lepto.html' %}
 
-
         <!-- Footer -->
         {% include 'containers/layouts/footer/main_footer.html' %}
-
       </div>
     </div>
 
     {% include 'containers/components/js.html' %}
   </body>
+
+  <script>
+        var Doctors_Graph_Patients = (function() {
+          //
+          // Variables
+          //
+
+          var $chart = $("#doctors_graph_patients");
+
+          //
+          // Methods
+          //
+
+          // Init chart
+          function initChart($chart) {
+            // Create chart
+            var ordersChart = new Chart($chart, {
+              type: "line",
+              data: {
+                labels: [
+                  "January",
+                  "February",
+                  "March",
+                  "April",
+                  "May",
+                  "June",
+                  "July",
+                  "August",
+                  "September",
+                  "October",
+                  "November",
+                  "December"
+                ],
+                datasets: [
+                  {
+                    label: "Patients",
+                    data: [
+                    {{total_patient}} - 56,
+                    {{total_patient}} - 50,
+                    {{total_patient}},
+                    {{total_patient}} * 0,
+                    {{total_patient}} * 0,
+                    {{total_patient}} * 0,
+                    {{total_patient}} * 0,
+                    {{total_patient}} * 0,
+                    {{total_patient}} * 0,
+                    {{total_patient}} * 0,
+                    {{total_patient}} * 0,
+                    {{total_patient}} * 0]
+                  }
+                ]
+              }
+            });
+
+            // Save to jQuery object
+            $chart.data("chart", ordersChart);
+          }
+
+          // Init chart
+          if ($chart.length) {
+            initChart($chart);
+          }
+        })();
+
+        var Doctors_GraphDengue2017 = (function () {
+
+        //
+        // Variables
+        //
+
+        var $chart = $('#doctors_graph_dengue_2017');
+
+
+        //
+        // Methods
+        //
+
+        // Init chart
+        function initChart($chart) {
+
+            // Create chart
+            var ordersChart = new Chart($chart, {
+                type: 'line',
+                data: {
+                    labels: [
+                      'Jan',
+                      'Feb',
+                      'Mar',
+                      'Apr',
+                      'May',
+                      'Jun',
+                      'Jul',
+                      'Aug',
+                      'Sep',
+                      'Oct',
+                      'Nov',
+                      'Dec'
+                    ],
+                    datasets: [{
+                        label: 'Infected',
+                        data: [1, 2, 1, 2, 1, 1, 2, 3, 1, 2, 1, 1],
+                        borderColor: 'blue',
+                        pointBackgroundColor: 'blue'
+                    }],
+
+                }
+            });
+
+            // Save to jQuery object
+            $chart.data('chart', ordersChart);
+        }
+
+
+        // Init chart
+        if ($chart.length) {
+            initChart($chart);
+        }
+
+    })();
+
+    var Doctors_GraphDengue2018 = (function () {
+
+    //
+    // Variables
+    //
+
+    var $chart = $('#doctors_graph_dengue_2018');
+
+
+    //
+    // Methods
+    //
+
+    // Init chart
+    function initChart($chart) {
+
+        // Create chart
+        var ordersChart = new Chart($chart, {
+            type: 'line',
+            data: {
+                labels: [
+                      'Jan',
+                      'Feb',
+                      'Mar',
+                      'Apr',
+                      'May',
+                      'Jun',
+                      'Jul',
+                      'Aug',
+                      'Sep',
+                      'Oct',
+                      'Nov',
+                      'Dec'
+                    ],
+                datasets: [{
+                    label: 'Infected',
+                    data: [1, 2, 1, 2, 3, 1, 1, 2, 1, 1, 1, 1],
+                    borderColor: 'orange',
+                    pointBackgroundColor: 'orange'
+                }],
+
+            }
+        });
+
+        // Save to jQuery object
+        $chart.data('chart', ordersChart);
+    }
+
+
+    // Init chart
+    if ($chart.length) {
+        initChart($chart);
+    }
+
+})();
+var Doctors_GraphDengue2019 = (function () {
+
+    //
+    // Variables
+    //
+
+    var $chart = $('#doctors_graph_dengue_2019');
+
+
+    //
+    // Methods
+    //
+
+    // Init chart
+    function initChart($chart) {
+
+        // Create chart
+        var ordersChart = new Chart($chart, {
+            type: 'line',
+            data: {
+                labels: [
+                      'Jan',
+                      'Feb',
+                      'Mar',
+                      'Apr',
+                      'May',
+                      'Jun',
+                      'Jul',
+                      'Aug',
+                      'Sep',
+                      'Oct',
+                      'Nov',
+                      'Dec'
+                    ],
+                datasets: [{
+                    label: 'Infected',
+                    data: [1, 2, 1, 1, 2, 3, 1, 1, 1, 1, 1, 1],
+                    borderColor: 'red',
+                    pointBackgroundColor: 'red'
+                }],
+
+            }
+        });
+
+        // Save to jQuery object
+        $chart.data('chart', ordersChart);
+    }
+
+
+    // Init chart
+    if ($chart.length) {
+        initChart($chart);
+    }
+
+})();
+var Doctors_GraphDengue2020 = (function () {
+
+    //
+    // Variables
+    //
+
+    var $chart = $('#doctors_graph_dengue_2020');
+
+
+    //
+    // Methods
+    //
+
+    // Init chart
+    function initChart($chart) {
+
+        // Create chart
+        var ordersChart = new Chart($chart, {
+            type: 'line',
+            data: {
+                labels: [
+                      'Jan',
+                      'Feb',
+                      'Mar',
+                      'Apr',
+                      'May',
+                      'Jun',
+                      'Jul',
+                      'Aug',
+                      'Sep',
+                      'Oct',
+                      'Nov',
+                      'Dec'
+                    ],
+                datasets: [{
+                    label: 'Infected',
+                    data: [
+                    {{total_patient_dengue}} + 1, 
+                    {{total_patient_dengue}} + 6, 
+                    {{total_patient_dengue}}, 
+                    {{total_patient_dengue}} * 0, 
+                    {{total_patient_dengue}} * 0, 
+                    {{total_patient_dengue}} * 0, 
+                    {{total_patient_dengue}} * 0,
+                    {{total_patient_dengue}} * 0,
+                    {{total_patient_dengue}} * 0,
+                    {{total_patient_dengue}} * 0, 
+                    {{total_patient_dengue}} * 0, 
+                    {{total_patient_dengue}} * 0
+                    ],
+                    borderColor: 'green',
+                    pointBackgroundColor: 'green'
+                }],
+
+            }
+        });
+
+        // Save to jQuery object
+        $chart.data('chart', ordersChart);
+    }
+
+
+    // Init chart
+    if ($chart.length) {
+        initChart($chart);
+    }
+
+})();
+
+// Dental !!!!!!!!!!!!!!!!!
+
+var Doctors_GraphDengue2017 = (function () {
+
+        //
+        // Variables
+        //
+
+        var $chart = $('#doctors_graph_dental_2017');
+
+
+        //
+        // Methods
+        //
+
+        // Init chart
+        function initChart($chart) {
+
+            // Create chart
+            var ordersChart = new Chart($chart, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                      'Q1',
+                      'Q2',
+                      'Q3',
+                      'Q4'
+                    ],
+                    datasets: [{
+                        label: 'Infected',
+                        data: [1, 2, 1, 2],
+                        backgroundColor: [
+                          'blue',
+                          'red',
+                          'green',
+                          'orange'
+                        ],
+                        pointBackgroundColor: [
+                          'blue',
+                          'red',
+                          'green',
+                          'orange'
+                        ],
+                    }],
+
+                }
+            });
+
+            // Save to jQuery object
+            $chart.data('chart', ordersChart);
+        }
+
+
+        // Init chart
+        if ($chart.length) {
+            initChart($chart);
+        }
+
+    })();
+
+    var Doctors_GraphDengue2018 = (function () {
+
+    //
+    // Variables
+    //
+
+    var $chart = $('#doctors_graph_dental_2018');
+
+
+    //
+    // Methods
+    //
+
+    // Init chart
+    function initChart($chart) {
+
+        // Create chart
+        var ordersChart = new Chart($chart, {
+            type: 'doughnut',
+                data: {
+                    labels: [
+                      'Q1',
+                      'Q2',
+                      'Q3',
+                      'Q4'
+                    ],
+                    datasets: [{
+                        label: 'Infected',
+                        data: [2, 1, 3, 2],
+                        backgroundColor: [
+                          'blue',
+                          'red',
+                          'green',
+                          'orange'
+                        ],
+                        pointBackgroundColor: [
+                          'blue',
+                          'red',
+                          'green',
+                          'orange'
+                        ],
+                    }],
+
+                }
+        });
+
+        // Save to jQuery object
+        $chart.data('chart', ordersChart);
+    }
+
+
+    // Init chart
+    if ($chart.length) {
+        initChart($chart);
+    }
+
+})();
+var Doctors_GraphDengue2019 = (function () {
+
+    //
+    // Variables
+    //
+
+    var $chart = $('#doctors_graph_dental_2019');
+
+
+    //
+    // Methods
+    //
+
+    // Init chart
+    function initChart($chart) {
+
+        // Create chart
+        var ordersChart = new Chart($chart, {
+            type: 'doughnut',
+                data: {
+                    labels: [
+                      'Q1',
+                      'Q2',
+                      'Q3',
+                      'Q4'
+                    ],
+                    datasets: [{
+                        label: 'Infected',
+                        data: [3, 1, 2, 3],
+                        backgroundColor: [
+                          'blue',
+                          'red',
+                          'green',
+                          'orange'
+                        ],
+                        pointBackgroundColor: [
+                          'blue',
+                          'red',
+                          'green',
+                          'orange'
+                        ],
+                    }],
+
+                }
+        });
+
+        // Save to jQuery object
+        $chart.data('chart', ordersChart);
+    }
+
+
+    // Init chart
+    if ($chart.length) {
+        initChart($chart);
+    }
+
+})();
+var Doctors_GraphDengue2020 = (function () {
+
+    //
+    // Variables
+    //
+
+    var $chart = $('#doctors_graph_dental_2020');
+
+
+    //
+    // Methods
+    //
+
+    // Init chart
+    function initChart($chart) {
+
+        // Create chart
+        var ordersChart = new Chart($chart, {
+           type: 'doughnut',
+                data: {
+                    labels: [
+                      'Q1',
+                      'Q2',
+                      'Q3',
+                      'Q4'
+                    ],
+                    datasets: [{
+                        label: 'Infected',
+                        data: [
+                        {{total_patient_cleaning}}, 
+                        {{total_patient_cleaning}} * 0, 
+                        {{total_patient_cleaning}} * 0, 
+                        {{total_patient_cleaning}} * 0],
+                        backgroundColor: [
+                          'blue',
+                        ],
+                        pointBackgroundColor: [
+                          'blue',
+                        ],
+                    }],
+
+                }
+        });
+
+        // Save to jQuery object
+        $chart.data('chart', ordersChart);
+    }
+
+
+    // Init chart
+    if ($chart.length) {
+        initChart($chart);
+    }
+
+})();
+  </script>
 </html>

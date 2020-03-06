@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.core import serializers
 
 from datetime import date, datetime
 from django.db.models.functions import TruncMonth, TruncDate
@@ -23,11 +24,21 @@ def doctorsDashboardHospital(request):
             .values('month').annotate(total=Count('date_joined')).filter(date_joined__month=today)
 
     total_patient = patient.count()
+    total_patient_dengue = Patient.objects.filter(case='Dengue').count()
+    total_patient_cleaning = Patient.objects.filter(case='Cleaning').count()
+    total_patient_corona = Patient.objects.filter(case='Corona Virus').count()
+
+    
+    total_patient = patient.count()
 
     context = {
         'patient' : patient,
         'total_patient' : total_patient,
-        'totalPatientsTodaysMonth': totalPatientsTodaysMonth
+        'total_patient_dengue' : total_patient_dengue,
+        'total_patient_cleaning' : total_patient_cleaning,
+        'total_patient_corona' : total_patient_corona,
+        'totalPatientsTodaysMonth': totalPatientsTodaysMonth,
+
     }
 
     return render(request, 'doctors/views/doctors_dashboard_hospital.html', context)

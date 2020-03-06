@@ -55,10 +55,6 @@ def registerPage(request):
                 form = CreateUserForm(request.POST)
                 if form.is_valid():
                     user = form.save()
-
-                    group = Group.objects.get(name='Patient')
-                    user.groups.add(group)
-
                     username = form.cleaned_data.get('username')
 
                     return redirect('login')
