@@ -1,0 +1,628 @@
+<div class="row">
+  <div class="col-xl-12 order-xl-1">
+    <div class="card">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col-8">
+            <h3 class="mb-0">Profile</h3>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <form>
+          <h6 class="heading-small text-muted mb-4">
+            User information
+          </h6>
+          <div class="pl-lg-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">Medical ID</label>
+                  <input
+                    class="form-control"
+                    value="MDHAU***SH102"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">Full Name</label>
+                  <input
+                    class="form-control"
+                    value="{{user.patient.lastName}}, {{user.patient.firstName}} {{user.patient.middleName}}"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <label class="form-control-label">Birthdate</label>
+                  <input
+                    class="form-control"
+                    value="{{user.patient.birthDate}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <label class="form-control-label">Gender</label>
+                  <input
+                    class="form-control"
+                    value="{{user.patient.gender}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <label class="form-control-label">Mobile Number</label>
+                  <input
+                    class="form-control"
+                    value="{{user.patient.mobile_number}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <label class="form-control-label">Civil Status</label>
+                  <input
+                    class="form-control"
+                    value="{{user.patient.maritalStatus}}"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4" />
+          <h6 class="heading-small text-muted mb-4">
+            Contact information
+          </h6>
+          <div class="pl-lg-4">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="form-control-label">Address</label>
+                  <input
+                    class="form-control"
+                    value="{{user.patient.homeAddress}}"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="form-control-label">City</label>
+                  <input
+                    class="form-control"
+                    value="{{user.patient.city}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="form-control-label">Country</label>
+                  <input
+                    class="form-control"
+                    value="{{user.patient.country}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="form-control-label">Postal code</label>
+                  <input
+                    class="form-control"
+                    value="{{user.patient.postal}}"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4" />
+          <h6 class="heading-small text-muted mb-4">
+            Medical Information (Diagnostics)
+          </h6>
+          <div class="pl-lg-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">Medications</label>
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    value="{{user.patient.medications}}"
+                    readonly
+                  ></textarea>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">Medical Directives</label>
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    value="{{patient.medicalDirectives}}"
+                    readonly
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">Medical Problems</label>
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    value="{{patient.medicalProblems}}"
+                    readonly
+                  ></textarea>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">Vital Signs</label>
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    value="{{patient.vitalSigns}}"
+                    readonly
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">Physical Exam</label>
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    value="{{patient.physicalExam}}"
+                    readonly
+                  ></textarea>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">Medical History</label>
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    value="{{patient.medicalHistory}}"
+                    readonly
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">Medication Plans</label>
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    value="{{patient.medicationPlan}}"
+                    readonly
+                  ></textarea>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">Medical Orders</label>
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    value="{{patient.medicalOrders}}"
+                    readonly
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4" />
+
+          <h6 class="heading-small text-muted mb-4">
+            Medical Information (Test)
+          </h6>
+          <div class="pl-lg-4">
+            <div class="row">
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">ALK Phos</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.alkPhos}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">BUN</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.bun}} mg/dl"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Calcium</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.calcium}} mg/dl"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Chloride</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.chloride}} mmol/l "
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">CO2</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.co2}} mmol/l "
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Creatinine</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.creatinine}} mg/dl"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">PO4</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.po4}} mg/dl"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Potassium</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.potassium}} mmol/l"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Sgot (AST)</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.sgot}} U/L"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Bili Total</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.biliTotal}} mg/dl"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Uric Acid</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.uricAcid}} mg/dl"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Ldh Total</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.ldhTotal}} IU/L"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Sodium</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.sodium}} mmol/l"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4" />
+          <h6 class="heading-small text-muted mb-4">
+            Medical Information (Personal)
+          </h6>
+          <div class="pl-lg-4">
+            <div class="row">
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Height</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.height}} in"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Weight</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.weight}} lbs"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Temperature</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.temperature}} deg C"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Temp Site</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.tempSite}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Pulse Rate</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.pulseRate}} /min"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Pulse Rhytm</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.pulseRhytm}}"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Resp Rate</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.respRate}} /min"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">BP Systolic</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.bpSystolic}} mm Hg"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">BP Diastolic</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.bpDiastolic}} mm Hg"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Cholesterol</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.cholesterol}} mg/dL"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Hdl</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.hdl}} mg/dL"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Ldh</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.ldl}} mg/dL"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">CXR</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.cxr}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">EKG</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.ekg}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Pap Smear</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.papSmear}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Breast Exam</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.breastExam}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Mammogram</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.mammogram}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Hemoccult</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.hemoccult}}"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Flu Vax</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.fluVax}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Pneumovax</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.pneumovax}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Td Booster</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.tdBooster}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Foot Exam</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.footExam}}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group">
+                  <label class="form-control-label">Eye Exam</label>
+                  <input
+                    class="form-control"
+                    value="{{patient.eyeExam}}"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

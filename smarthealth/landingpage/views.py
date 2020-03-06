@@ -5,13 +5,19 @@ from django.contrib.auth.decorators import login_required
 from users.decorators import unauthenticated_user
 from django.contrib.auth.models import Group
 
-
+from patients.models import *
 from .forms import CreateUserForm
 
 
 def homePage(request):
 
-    return render(request, 'landingpage/views/home.html', {})
+    patient = Patient.objects.all()
+
+    context = {
+        'patient' : patient
+    }
+
+    return render(request, 'landingpage/views/home.html', context)
 
 
 def policyPage(request):

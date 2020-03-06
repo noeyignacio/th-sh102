@@ -1,4 +1,7 @@
 from django.core.validators import RegexValidator
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+
 from django.db import models
 
 class Patient(models.Model):
@@ -17,7 +20,7 @@ class Patient(models.Model):
         ('Legally Seperated', 'Legally Seperated'),
         ('Widowed', 'Widowed')
     )
-
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     lastName = models.CharField(max_length=100, null=True, default="N/A")
     firstName = models.CharField(max_length=100, null=True, default="N/A")
     middleName = models.CharField(max_length=100, null=True, default="N/A")
@@ -84,8 +87,22 @@ class Patient(models.Model):
 
     date_joined = models.DateTimeField(auto_now_add=True)
 
+
     def __str__(self):
-        return self.lastName + ', ' + self.firstName + ' ' + self.middleName
+        return str(self.user)
     
 
+def create_patient(sender, instance, created, **kwargs):
+
+    if created: 
+        Patient.objects.create(user=instance)
+
+post_save.connect(create_patient, sender=User)
+
+
+def update_patient(sender, instance, created, **kwargs):
+
+    if created == False:
+        instance.profile.save()
     
+post_save.connect(create_patient, sender=User)
